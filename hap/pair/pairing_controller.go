@@ -2,9 +2,10 @@ package pair
 
 import (
 	"fmt"
-	"github.com/brutella/hc/db"
-	"github.com/brutella/hc/log"
-	"github.com/brutella/hc/util"
+
+	"hc/db"
+	"hc/log"
+	"hc/util"
 )
 
 // PairingController handles un-/pairing with a client by simply exchanging

@@ -1,12 +1,12 @@
 package controller
 
 import (
-	"github.com/brutella/hc/accessory"
-
 	"bytes"
 	"encoding/json"
 	"io/ioutil"
 	"testing"
+
+	"hc/accessory"
 )
 
 func TestGetAccessories(t *testing.T) {

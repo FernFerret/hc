@@ -1,17 +1,17 @@
 package controller
 
 import (
-	"github.com/brutella/hc/accessory"
-	"github.com/brutella/hc/characteristic"
-	"github.com/brutella/hc/hap/data"
-	"github.com/brutella/hc/service"
-
 	"bytes"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/url"
 	"testing"
+
+	"hc/accessory"
+	"hc/characteristic"
+	"hc/hap/data"
+	"hc/service"
 )
 
 func idsString(accessoryID, characteristicID int64) url.Values {

@@ -2,14 +2,14 @@ package hap
 
 import (
 	"bytes"
-	"github.com/brutella/hc/crypto"
-	"github.com/brutella/hc/log"
 	"net"
 	"time"
-
 	"bufio"
 	"io"
 	"io/ioutil"
+
+	"hc/crypto"
+	"hc/log"
 )
 
 // Connection is a connection based on HAP protocol which encrypts and decrypts the data.

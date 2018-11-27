@@ -13,7 +13,7 @@ const ServiceStructTemplate = `// THIS FILE IS AUTO-GENERATED
 package service
 
 import (
-	"github.com/brutella/hc/characteristic"
+	"hc/characteristic"
 )
 
 const {{.TypeName}} = "{{.TypeValue}}"
@@ -31,7 +31,7 @@ func New{{.StructName}}() *{{.StructName}} {
     svc.{{.StructName}} = characteristic.New{{.StructName}}()
     svc.AddCharacteristic(svc.{{.StructName}}.Characteristic)
     {{end}}
-    
+
 	return &svc
 }
 `

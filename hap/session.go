@@ -1,8 +1,9 @@
 package hap
 
 import (
-	"github.com/brutella/hc/crypto"
 	"net"
+
+	"hc/crypto"
 )
 
 // Session contains objects (encrypter, decrypter, pairing handler,...) used to handle the data communication.

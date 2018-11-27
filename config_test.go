@@ -1,9 +1,10 @@
 package hc
 
 import (
-	"github.com/brutella/hc/util"
 	"reflect"
 	"testing"
+
+	"hc/util"
 )
 
 var config = &Config{

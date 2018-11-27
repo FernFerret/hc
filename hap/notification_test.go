@@ -1,12 +1,12 @@
 package hap
 
 import (
-	"github.com/brutella/hc/accessory"
-
 	"bytes"
 	"io/ioutil"
 	"strings"
 	"testing"
+
+	"hc/accessory"
 )
 
 var info = accessory.Info{

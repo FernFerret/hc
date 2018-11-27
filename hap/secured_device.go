@@ -1,7 +1,7 @@
 package hap
 
 import (
-	"github.com/brutella/hc/db"
+	"hc/db"
 )
 
 // SecuredDevice is a HomeKit device with a pin.

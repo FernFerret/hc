@@ -3,8 +3,9 @@ package controller
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/brutella/hc/accessory"
 	"io"
+
+	"hc/accessory"
 )
 
 // ContainerController implements the AccessoriesHandler interface.

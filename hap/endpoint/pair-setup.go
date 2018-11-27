@@ -1,15 +1,15 @@
 package endpoint
 
 import (
-	"github.com/brutella/hc/db"
-	"github.com/brutella/hc/event"
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/hap/pair"
-	"github.com/brutella/hc/log"
-	"github.com/brutella/hc/util"
-
 	"io"
 	"net/http"
+
+	"hc/db"
+	"hc/event"
+	"hc/hap"
+	"hc/hap/pair"
+	"hc/log"
+	"hc/util"
 )
 
 // PairSetup handles the /pair-setup endpoint and returns TLV8 encoded data.

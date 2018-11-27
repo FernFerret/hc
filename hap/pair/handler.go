@@ -1,11 +1,11 @@
 package pair
 
 import (
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/log"
-	"github.com/brutella/hc/util"
-
 	"io"
+
+	"hc/hap"
+	"hc/log"
+	"hc/util"
 )
 
 // HandleReaderForHandler wraps h.Handle() call and logs sequence numbers and errors to the console.

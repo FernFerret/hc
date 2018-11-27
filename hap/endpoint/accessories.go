@@ -1,12 +1,12 @@
 package endpoint
 
 import (
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/log"
-
 	"io/ioutil"
 	"net/http"
 	"sync"
+
+	"hc/hap"
+	"hc/log"
 )
 
 // Accessories handles the /accessories endpoint and returns all accessories as JSON

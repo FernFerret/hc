@@ -6,8 +6,9 @@ import (
 	"net"
 	"reflect"
 
-	"github.com/brutella/hc/log"
-	"github.com/brutella/hc/util"
+	"hc/log"
+	"hc/util"
+
 	"github.com/gosexy/to"
 )
 

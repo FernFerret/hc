@@ -1,21 +1,21 @@
 package controller
 
 import (
-	"github.com/brutella/hc/accessory"
-	"github.com/brutella/hc/characteristic"
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/hap/data"
-	"github.com/brutella/hc/log"
-	"github.com/gosexy/to"
-
 	"bytes"
 	"encoding/json"
-
 	"io"
 	"io/ioutil"
 	"net"
 	"net/url"
 	"strings"
+
+	"hc/accessory"
+	"hc/characteristic"
+	"hc/hap"
+	"hc/hap/data"
+	"hc/log"
+
+	"github.com/gosexy/to"
 )
 
 // CharacteristicController implements the CharacteristicsHandler interface and provides

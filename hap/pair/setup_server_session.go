@@ -1,12 +1,12 @@
 package pair
 
 import (
-	"github.com/brutella/hc/crypto/hkdf"
-
-	"crypto/sha512"
-	"github.com/tadglines/go-pkgs/crypto/srp"
-
 	"errors"
+	"crypto/sha512"
+
+	"hc/crypto/hkdf"
+
+	"github.com/tadglines/go-pkgs/crypto/srp"
 )
 
 // SetupServerSession holds the keys to pair with a client.

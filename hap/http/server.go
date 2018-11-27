@@ -1,19 +1,19 @@
 package http
 
 import (
-	"github.com/brutella/hc/accessory"
-	"github.com/brutella/hc/db"
-	"github.com/brutella/hc/event"
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/hap/controller"
-	"github.com/brutella/hc/hap/endpoint"
-	"github.com/brutella/hc/hap/pair"
-	"github.com/brutella/hc/log"
-
 	"context"
 	"net"
 	"net/http"
 	"sync"
+
+	"hc/accessory"
+	"hc/db"
+	"hc/event"
+	"hc/hap"
+	"hc/hap/controller"
+	"hc/hap/endpoint"
+	"hc/hap/pair"
+	"hc/log"
 )
 
 // Server provides a similar interfaces as http.Server to start and stop a TCP server.

@@ -1,18 +1,18 @@
 package pair
 
 import (
-	"github.com/brutella/hc/crypto"
-	"github.com/brutella/hc/crypto/chacha20poly1305"
-	"github.com/brutella/hc/crypto/hkdf"
-	"github.com/brutella/hc/db"
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/log"
-	"github.com/brutella/hc/util"
-
 	"bytes"
 	"encoding/hex"
 	"fmt"
 	"io"
+
+	"hc/crypto"
+	"hc/crypto/chacha20poly1305"
+	"hc/crypto/hkdf"
+	"hc/db"
+	"hc/hap"
+	"hc/log"
+	"hc/util"
 )
 
 // SetupClientController handles pairing with an accessory using SRP.

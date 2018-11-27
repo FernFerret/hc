@@ -2,10 +2,12 @@ package hc
 
 import (
 	"context"
-	"github.com/brutella/dnssd"
-	"github.com/brutella/hc/log"
 	"net"
 	"strings"
+
+	"hc/log"
+
+	"github.com/brutella/dnssd"
 )
 
 // MDNSService represents a mDNS service.

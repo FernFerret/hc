@@ -1,15 +1,15 @@
 package endpoint
 
 import (
-	"github.com/brutella/hc/crypto"
-	"github.com/brutella/hc/db"
-	"github.com/brutella/hc/hap"
-	"github.com/brutella/hc/hap/pair"
-	"github.com/brutella/hc/log"
-	"github.com/brutella/hc/util"
-
 	"io"
 	"net/http"
+
+	"hc/crypto"
+	"hc/db"
+	"hc/hap"
+	"hc/hap/pair"
+	"hc/log"
+	"hc/util"
 )
 
 // PairVerify handles the /pair-verify endpoint and returns TLV8 encoded data

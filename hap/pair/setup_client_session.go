@@ -1,9 +1,10 @@
 package pair
 
 import (
-	"github.com/brutella/hc/crypto/hkdf"
-
 	"crypto/sha512"
+
+	"hc/crypto/hkdf"
+
 	"github.com/tadglines/go-pkgs/crypto/srp"
 )
 

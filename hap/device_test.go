@@ -1,10 +1,11 @@
 package hap
 
 import (
-	"github.com/brutella/hc/db"
 	"os"
 	"reflect"
 	"testing"
+
+	"hc/db"
 )
 
 func TestNewDevice(t *testing.T) {
