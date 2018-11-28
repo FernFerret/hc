@@ -2,24 +2,40 @@ package log
 
 import (
 	"io/ioutil"
-	"log"
 	"os"
+
+	"github.com/sirupsen/logrus"
 )
+
+func getLogger(pfx string, enabled bool) *logrus.Entry {
+	// Use the standardLogger's format
+	logger := logrus.New()
+	formatter := logrus.StandardLogger().Formatter
+	logger.SetFormatter(formatter)
+	if enabled {
+		logger.SetOutput(os.Stdout)
+	} else {
+		logger.SetOutput(ioutil.Discard)
+	}
+	return logger.WithFields(logrus.Fields{
+		"from": "hkapi-debug",
+	})
+}
 
 var (
 	// Debug generates debug lines of output with a "DEBUG" prefix.
 	// By default the lines are written to /dev/null.
-	Debug = &Logger{log.New(ioutil.Discard, "DEBUG ", log.LstdFlags)}
+	Debug = getLogger("DEBUG", false)
 
 	// Info generates debug lines of output with a "INFO" prefix.
 	// By default the lines are written to stdout.
-	Info = &Logger{log.New(os.Stdout, "INFO ", log.LstdFlags)}
+	Info = logrus.StandardLogger().WithFields(logrus.Fields{"from": "hkapi"})
 )
 
-// Logger is a wrapper for log.Logger and provides
+// Logger is a wrapper for logrus.Logger and provides
 // methods to enable and disable logging.
 type Logger struct {
-	*log.Logger
+	*logrus.Logger
 }
 
 // Disable sets the logging output to /dev/null.
