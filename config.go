@@ -49,7 +49,6 @@ func defaultConfig(name string) *Config {
 		StoragePath:  name,
 		Pin:          "00102003", // default pin
 		Port:         "",         // empty string means that we get port from assigned by the system
-		IP:           ip.String(),
 		SetupId:      "EASYSETUP", // default setup id
 		name:         name,
 		id:           util.MAC48Address(util.RandomHexString()),
