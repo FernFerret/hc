@@ -8,6 +8,7 @@ import (
 	"net"
 	"reflect"
 
+    "github.com/brutella/hc/log"
 	"github.com/brutella/hc/util"
 	"github.com/gosexy/to"
 )
@@ -45,6 +46,11 @@ type Config struct {
 }
 
 func defaultConfig(name string) *Config {
+	ip, err := getFirstLocalIPAddr()
+	if err != nil {
+		log.Info.Panic(err)
+	}
+
 	return &Config{
 		StoragePath:  name,
 		Pin:          "00102003", // default pin
