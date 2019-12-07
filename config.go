@@ -8,7 +8,6 @@ import (
 	"net"
 	"reflect"
 
-	"github.com/brutella/hc/log"
 	"github.com/brutella/hc/util"
 	"github.com/gosexy/to"
 )
@@ -23,7 +22,7 @@ type Config struct {
 	// When empty, the transport uses a random port
 	Port string
 
-	// IP on which clients can connect.
+	// Deprecated: Specifying a static IP is discouraged.
 	IP string
 
 	// Pin with has to be entered on iOS client to pair with the accessory
@@ -46,11 +45,6 @@ type Config struct {
 }
 
 func defaultConfig(name string) *Config {
-	ip, err := getFirstLocalIPAddr()
-	if err != nil {
-		log.Info.Panic(err)
-	}
-
 	return &Config{
 		StoragePath:  name,
 		Pin:          "00102003", // default pin
@@ -93,15 +87,15 @@ func (cfg *Config) setupHash() string {
 
 // loads load the id, version and config hash
 func (cfg *Config) load(storage util.Storage) {
-	if b, err := storage.Get("uuid"); err == nil {
+	if b, err := storage.Get("uuid"); err == nil && len(b) > 0 {
 		cfg.id = string(b)
 	}
 
-	if b, err := storage.Get("version"); err == nil {
+	if b, err := storage.Get("version"); err == nil && len(b) > 0 {
 		cfg.version = to.Int64(string(b))
 	}
 
-	if b, err := storage.Get("configHash"); err == nil {
+	if b, err := storage.Get("configHash"); err == nil && len(b) > 0 {
 		cfg.configHash = b
 	}
 }
