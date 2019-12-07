@@ -2,7 +2,7 @@
 
 [![GoDoc Widget]][GoDoc] [![Travis Widget]][Travis]
 
-`hc` is a lightweight framework to develop HomeKit accessories in Go. 
+`hc` is a lightweight framework to develop HomeKit accessories in Go.
 It abstracts the **H**omeKit **A**ccessory **P**rotocol (HAP) and makes it easy to work with [services](service/README.md) and [characteristics](characteristic/README.md).
 
 `hc` handles the underlying communication between HomeKit accessories and clients.
@@ -21,14 +21,14 @@ Here are some projects which use `hc`.
 
 HomeKit is fully integrated into iOS since iOS 8. Developers can use [HomeKit.framework](https://developer.apple.com/documentation/homekit) to communicate with accessories using high-level APIs.
 
-<img alt="Home.app" src="_img/home-icon.png?raw=true" width="92" />
+<img alt="Home+.app" src="_img/home-icon.png?raw=true" width="87" />
 
-I've developed the [Home][home] app to control HomeKit accessories from iPhone, iPad, and Apple Watch.
+I've developed the [Home+][home+] app to control HomeKit accessories from iPhone, iPad, and Apple Watch.
 If you want to support `hc`, please purchase Home from the [App Store][home-appstore]. That would be awesome. ❤️
 
-Checkout the official [website][home].
+Checkout the official [website][home+].
 
-[home]: https://hochgatterer.me/home/
+[home+]: https://hochgatterer.me/home/
 [home-appstore]: http://itunes.apple.com/app/id995994352
 [GoDoc]: https://godoc.org/github.com/brutella/hc
 [GoDoc Widget]: https://godoc.org/github.com/brutella/hc?status.svg
@@ -37,6 +37,7 @@ Checkout the official [website][home].
 
 ## Features
 
+- Supports Go modules (requires Go 1.13, or setting `GO111MODULE` to `on` when using Go 1.11/12)
 - Full implementation of the HAP in Go
 - Supports all HomeKit [services and characteristics](service/README.md)
 - Built-in service announcement via DNS-SD using [dnssd](http://github.com/brutella/dnssd)

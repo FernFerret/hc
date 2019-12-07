@@ -10,7 +10,7 @@ import (
 
     "github.com/brutella/hc/log"
 	"github.com/brutella/hc/util"
-	"github.com/gosexy/to"
+	"github.com/xiam/to"
 )
 
 // Config provides  basic cfguration for an IP transport
